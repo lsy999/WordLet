@@ -1,0 +1,28 @@
+<com.wjc.worldlet.view.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity"
+    android:background="@drawable/mybg"
+    >
+
+    <include layout="@layout/leftmenu" />
+
+    <com.wjc.worldlet.view.MyRelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/tab_bar_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            class="com.wjc.worldlet.tabhost.TabFragment" />
+    </com.wjc.worldlet.view.MyRelativeLayout>
+</com.wjc.worldlet.view.DragLayout>
